@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KPI Dashboard</title>
+  <link rel="stylesheet" href="../../shared-dashboard.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="logo">◈ Analytica</div>
+    <a href="../overview-dashboard/index.html">Overview</a>
+    <a class="active" href="#">KPI Dashboard</a>
+    <a href="../customizable-dashboard/index.html">Customize</a>
+    <a href="../../index.html">← Collection</a>
+  </aside>
+
+  <main class="main">
+    <header class="page-header">
+      <div><span class="eyebrow">PERFORMANCE</span><h1>KPI Dashboard</h1><p>Track goals and measure business performance.</p></div>
+      <button class="primary-btn" onclick="showMessage()">Export KPI</button>
+    </header>
+
+    <section class="kpi-grid">
+      <article class="kpi-card"><div class="kpi-title">Monthly Revenue <span>↗</span></div><strong>$124.8K</strong><p>Target: $140K</p><div class="progress"><i style="width:89%"></i></div><small>89% of target</small></article>
+      <article class="kpi-card"><div class="kpi-title">New Customers <span>↗</span></div><strong>1,284</strong><p>Target: 1,500</p><div class="progress"><i style="width:86%"></i></div><small>86% of target</small></article>
+      <article class="kpi-card"><div class="kpi-title">Retention <span>↗</span></div><strong>94.6%</strong><p>Target: 92%</p><div class="progress"><i style="width:95%"></i></div><small>Above target</small></article>
+      <article class="kpi-card"><div class="kpi-title">Satisfaction <span>↗</span></div><strong>4.7/5</strong><p>Target: 4.5/5</p><div class="progress"><i style="width:94%"></i></div><small>Excellent</small></article>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head"><div><h2>Goal Tracking</h2><p>Quarterly objectives</p></div></div>
+      <div class="goal"><div><b>Revenue Growth</b><span>78%</span></div><div class="progress"><i style="width:78%"></i></div></div>
+      <div class="goal"><div><b>Customer Acquisition</b><span>64%</span></div><div class="progress"><i style="width:64%"></i></div></div>
+      <div class="goal"><div><b>Product Adoption</b><span>91%</span></div><div class="progress"><i style="width:91%"></i></div></div>
+      <div class="goal"><div><b>Support Response</b><span>96%</span></div><div class="progress"><i style="width:96%"></i></div></div>
+    </section>
+  </main>
+  <script src="../../shared-dashboard.js"></script>
+</body>
+</html>

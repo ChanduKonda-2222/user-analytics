@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customizable Dashboard</title>
+  <link rel="stylesheet" href="../../shared-dashboard.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="logo">◈ Analytica</div>
+    <a href="../overview-dashboard/index.html">Overview</a>
+    <a href="../kpi-dashboard/index.html">KPI Dashboard</a>
+    <a class="active" href="#">Customize</a>
+    <a href="../../index.html">← Collection</a>
+  </aside>
+
+  <main class="main">
+    <header class="page-header">
+      <div><span class="eyebrow">PERSONALIZATION</span><h1>Customizable Dashboard</h1><p>Choose which widgets you want to see.</p></div>
+      <button class="primary-btn" id="resetBtn">Reset Layout</button>
+    </header>
+
+    <div class="toolbar">
+      <label><input type="checkbox" checked data-widget="revenue"> Revenue</label>
+      <label><input type="checkbox" checked data-widget="users"> Users</label>
+      <label><input type="checkbox" checked data-widget="orders"> Orders</label>
+      <label><input type="checkbox" checked data-widget="activity"> Activity</label>
+    </div>
+
+    <section class="custom-grid" id="widgetArea">
+      <article class="panel widget" data-widget-id="revenue"><div class="panel-head"><h2>Revenue</h2><button class="drag">↕</button></div><strong class="big-number">$84,240</strong><p class="up">↑ 12.4% from last month</p></article>
+      <article class="panel widget" data-widget-id="users"><div class="panel-head"><h2>Active Users</h2><button class="drag">↕</button></div><strong class="big-number">18,420</strong><p class="up">↑ 8.2% from last month</p></article>
+      <article class="panel widget" data-widget-id="orders"><div class="panel-head"><h2>Orders</h2><button class="drag">↕</button></div><strong class="big-number">3,842</strong><p class="up">↑ 5.7% from last month</p></article>
+      <article class="panel widget" data-widget-id="activity"><div class="panel-head"><h2>Activity Feed</h2><button class="drag">↕</button></div><p>🟢 Report generated</p><p>🟣 New customer added</p><p>🟠 Campaign updated</p></article>
+    </section>
+  </main>
+  <script src="../../shared-dashboard.js"></script>
+  <script>
+    const checks = document.querySelectorAll("[data-widget]");
+    const widgets = document.querySelectorAll(".widget");
+
+    checks.forEach(check => {
+      check.addEventListener("change", () => {
+        const item = document.querySelector('[data-widget-id="' + check.dataset.widget + '"]');
+        item.style.display = check.checked ? "block" : "none";
+      });
+    });
+
+    document.getElementById("resetBtn").addEventListener("click", () => {
+      checks.forEach(check => check.checked = true);
+      widgets.forEach(widget => widget.style.display = "block");
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Overview Dashboard</title>
+  <link rel="stylesheet" href="../../shared-dashboard.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="logo">◈ Analytica</div>
+    <a class="active" href="#">Overview</a>
+    <a href="../kpi-dashboard/index.html">KPI Dashboard</a>
+    <a href="../customizable-dashboard/index.html">Customize</a>
+    <a href="../../index.html">← Collection</a>
+  </aside>
+
+  <main class="main">
+    <header class="page-header">
+      <div>
+        <span class="eyebrow">ANALYTICS</span>
+        <h1>Overview Dashboard</h1>
+        <p>Monitor your business performance at a glance.</p>
+      </div>
+      <button class="primary-btn" onclick="showMessage()">+ Add Report</button>
+    </header>
+
+    <section class="stats">
+      <article class="stat-card">
+        <span>Total Revenue</span><strong>$84,240</strong><small class="up">↑ 12.4%</small>
+      </article>
+      <article class="stat-card">
+        <span>Active Users</span><strong>18,420</strong><small class="up">↑ 8.2%</small>
+      </article>
+      <article class="stat-card">
+        <span>Conversion</span><strong>6.84%</strong><small class="up">↑ 1.8%</small>
+      </article>
+      <article class="stat-card">
+        <span>Churn Rate</span><strong>2.14%</strong><small class="down">↓ 0.6%</small>
+      </article>
+    </section>
+
+    <section class="dashboard-grid">
+      <article class="panel wide">
+        <div class="panel-head">
+          <div><h2>Revenue Trend</h2><p>Last 7 months</p></div>
+          <select id="period">
+            <option>Monthly</option><option>Weekly</option>
+          </select>
+        </div>
+        <div class="chart">
+          <div class="bars">
+            <i style="height:42%"></i><i style="height:57%"></i><i style="height:49%"></i>
+            <i style="height:70%"></i><i style="height:63%"></i><i style="height:82%"></i><i style="height:94%"></i>
+          </div>
+          <div class="labels"><span>Apr</span><span>May</span><span>Jun</span><span>Jul</span><span>Aug</span><span>Sep</span><span>Oct</span></div>
+        </div>
+      </article>
+
+      <article class="panel">
+        <div class="panel-head"><div><h2>Traffic Sources</h2><p>Current month</p></div></div>
+        <div class="donut"><span>68%</span></div>
+        <ul class="legend">
+          <li><span>Organic Search</span><b>42%</b></li>
+          <li><span>Direct</span><b>26%</b></li>
+          <li><span>Social</span><b>18%</b></li>
+          <li><span>Other</span><b>14%</b></li>
+        </ul>
+      </article>
+
+      <article class="panel wide">
+        <div class="panel-head"><div><h2>Recent Activity</h2><p>Latest account events</p></div></div>
+        <div class="activity"><span>🟢</span><div><b>New customer registered</b><small>2 minutes ago</small></div><strong>+1</strong></div>
+        <div class="activity"><span>🟣</span><div><b>Monthly report generated</b><small>18 minutes ago</small></div><strong>PDF</strong></div>
+        <div class="activity"><span>🟠</span><div><b>Campaign reached goal</b><small>1 hour ago</small></div><strong>96%</strong></div>
+      </article>
+    </section>
+  </main>
+  <script src="../../shared-dashboard.js"></script>
+</body>
+</html>
